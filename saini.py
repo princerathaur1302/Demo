@@ -295,8 +295,7 @@ async def download_and_decrypt_video(url, cmd, name, key):
 async def send_vid(bot: Client, m: Message, cc, filename, thumb, name, prog, channel_id):
     subprocess.run(f'ffmpeg -i "{filename}" -ss 00:00:10 -vframes 1 "{filename}.jpg"', shell=True)
     await prog.delete (True)
-       reply = await bot.send_message(channel_id,)
- 
+       reply = await bot.send_message(channel_id,")
        try:
         if thumb == "/d":
             thumbnail = f"{filename}.jpg"
